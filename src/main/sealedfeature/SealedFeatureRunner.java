@@ -1,7 +1,8 @@
 package main.sealedfeature;
 
-public class Main {
-    public static void main(String[] args) {
+public class SealedFeatureRunner {
+
+    public static void start() {
         Shape circle = new Circle(5);
         Shape rectangle = new Rectangle(4, 6);
         Shape equilateralTriangle = new EquilateralTriangle(3);
@@ -13,7 +14,7 @@ public class Main {
         printShapeInfo(isoscelesTriangle);
     }
 
-    public static void printShapeInfo(Shape shape) {
+    private static void printShapeInfo(Shape shape) {
         switch (shape) {
             case Circle c -> System.out.println("Circle with radius: " + c.getRadius() + ", area: " + c.area());
             case Rectangle r ->
